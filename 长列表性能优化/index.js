@@ -1,20 +1,28 @@
 var ul = document.getElementById('long-list')
-var liNode = document.createElement('li')
-var count = 1
-var txtNode = document.createTextNode(count)
-liNode.appendChild(txtNode)
-ul.appendChild(liNode)
+var preliNode = document.createElement('li')
+var count = 0
+var cacheKeg = []
+// var txtNode = document.createTextNode(count)
+// preliNode.appendChild(txtNode)
+preliNode.style.height = 0 + 'px'
+preliNode.style.border = 0 + 'px'
+ul.appendChild(preliNode)
 
 function createLi() {
-  var li = document.createElement('li')
-  count++
-  var text = document.createTextNode(count)
-  li.appendChild(text)
-  ul.appendChild(li)
+  var li
+  
+  if (cacheKeg.length === 0) {
+    li = document.createElement('li')
+    count++
+  } else {
+    li = cacheKeg.pop()
+  }
+  return li
 }
 
 function removeLi(li) {
   ul.removeChild(li)
+  cacheKeg.push(li)
 }
 
 function checkIsBottom(target) {
@@ -25,29 +33,36 @@ function checkIsBottom(target) {
 }
 
 function checkIsTop(target) {
-  var scrollY = window.scroll
+  var scrollY = window.scrollY
   var targetBottom = target.offsetHeight + target.offsetTop
   return targetBottom > scrollY
 }
 
 function addTopData() {
-  var topLi = ul.firstChild
-  var topNextLi = topLi.nextSibling
+  
+  var prefixLi = ul.firstChild
+  var firstLi = prefixLi.nextSibling
   while(true) {
     var newFirstLi = createLi()
-    var newLiText = document.createTextNode(topNextLi.textContent - 1)
-    newFirstLi.appendChild(newLiText)
-    ul.insertBefore(newFirstLi, topNextLi);
-    if (!checkIsTop(prefixLi)) {
+    var newLiText = document.createTextNode(firstLi.textContent - 1)
+    var preliNodeHeight = preliNode.offsetHeight
+    // newFirstLi.removeChild(newFirstLi.childNodes[0])
+    newFirstLi.replaceChild(newLiText, newFirstLi.childNodes[0])
+    ul.insertBefore(newFirstLi, firstLi)
+    preliNode.style.height = preliNodeHeight - newFirstLi.offsetHeight
+    if (preliNode.offsetHeight === 0 && !checkIsTop(prefixLi)) {
       break;
     }
-    topNextLi = newFirstLi;
+    firstLi = newFirstLi;
   }
 }
 
 function delTopData(li) {
   var nextLi = li.nextSibling
   while(true) {
+    var preliNodeHeight = preliNode.offsetHeight
+    preliNode.style.height = preliNodeHeight + li.offsetHeight
+    
     removeLi(li)
     if (checkIsTop(nextLi)) {
       break
@@ -57,23 +72,28 @@ function delTopData(li) {
 }
 
 function addBottomData() {
+  var lastLi = ul.lastChild
+  var lastCount = parseInt(lastLi.innerHTML) || 0
   while (true) {
-    var lastLi = ul.lastChild
-    if (checkIsBottom(lastLi)) {
+    var li = document.createElement('li') ////////////////？？？？？？ 考虑到第一个元素
+    var text = document.createTextNode(++lastCount)
+    li.appendChild(text)
+    ul.appendChild(li)
+    if (checkIsBottom(li)) {
       break
     }
-    createLi()
   }
 }
 
 function delBottomData() {
+  var prefixLi = ul.firstChild
   var lastLi = ul.lastChild
   var prevLi = lastLi.previousSibling
   while(true) {
     removeLi(lastLi)
     lastLi = prevLi
-    prevLi = prevLi.previousSibling
-    if(!checkIsBottom(prevLi)) {
+    prevLi = lastLi.previousSibling
+    if (prevLi.previousSibling === prefixLi && !checkIsBottom(prevLi)) {
       break
     }
   }
@@ -88,8 +108,9 @@ window.onscroll = function () {
     delTopData(topDelLi)
   }
   // 头部添加节点
+  
   var topAddLi = ul.firstChild
-  if (checkIsTop(topAddLi)) {
+  if (topAddLi.offsetHeight != 0 && checkIsTop(topAddLi)) {
     addTopData()
   }
 
@@ -99,7 +120,7 @@ window.onscroll = function () {
     delBottomData()
   }
 
-  // 尾部添加节点
+  // 尾部添加节点 
   var btmAddLi = ul.lastChild
   if (!checkIsBottom(btmAddLi)) {
     addBottomData()
