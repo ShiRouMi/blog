@@ -1,5 +1,3 @@
-## 要求
-原生实现
 
 ## demo
 
@@ -12,3 +10,9 @@
 
 2. [sso单点登录](./sso单点登录/sso.js)
 备注：有些属性已被 web 标准废除
+
+3. [Vue 中 nextTick 实现](./vue实现/nextTick.js)
+待修改
+
+4. [函数柯里化](./函数柯里化/currying.js)
+待修改
