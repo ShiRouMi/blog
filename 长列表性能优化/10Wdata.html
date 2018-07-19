@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>页面加载海量数据</title>
+</head>
+
+<body>
+  <ul id="list-with-big-data">100000 数据</ul>
+  <script>
+    (function () {
+        const ulContainer = document.getElementById("list-with-big-data");
+
+        // 防御性编程
+        if (!ulContainer) {
+          return;
+        }
+
+        for (let i = 0; i < 100000; i++) {
+          const liItem = document.createElement("li");
+
+          liItem.innerText = i + 1;
+          // EventListener 回调函数的 this 默认指向当前节点，若使用箭头函数，得谨慎
+          liItem.addEventListener("click", function () {
+            alert(this.innerText);
+          });
+          ulContainer.appendChild(liItem);
+        }
+      })();
+  </script>
+</body>
+
+</html>
