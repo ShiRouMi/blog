@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>b页面</title>
+  </head>
+  <body>
+    <h1>b页面</h1>
+  </body>
+  <script>
+  // 从 a页面接收数据
+  var receivefroma = function(event) {
+    // if(event.origin !== '') return 
+    console.log('从a页面接收数据', event)
+  }
+  window.addEventListener('message', receivefroma, false)
+  // b页面发送数据
+  parent.postMessage( {msg: 'b页面发送消息'}, '*');
+
+  </script>
+</html>
