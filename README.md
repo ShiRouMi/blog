@@ -2,9 +2,8 @@
 
 记录 备份
 
+- 2018-11-19 文件上传练习
 - 2018-11-14 深拷贝（利用一个新的HTML5克隆算法称为“结构化克隆”）& lodash clone
-
-  H5 APi 比 `Json.parse(Json.stringify)` 支持`Date, RegExp, Map, Set, Blob, FileList, ImageData, sparse and typed Array`.
 - 2018-11-14 继承
 - 2018-09-11 Service Worker
 - 2018-09-11 跨域 posMessage
@@ -16,3 +15,6 @@
 - 2018-07-16 函数柯里化
 - 2018-07-11 Vue 中 nextTick 实现
 - 2018-05-31 sso单点登录
+
+H5 APi 比 `Json.parse(Json.stringify)` 支持  
+`Date, RegExp, Map, Set, Blob, FileList, ImageData, sparse and typed Array`.
