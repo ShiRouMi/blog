@@ -1,7 +1,7 @@
 ## blog
 
 记录 备份
-
+- 2018-11-27 [Promise 实现](./Promise/FePromise.js)
 - 2018-11-21 类
 - 2018-11-20 [Promise 理解](./Promise/Promise.md)
 - 2018-11-19 文件上传练习
