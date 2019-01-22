@@ -1,6 +1,6 @@
 ## blog
 
-
+- 2019-01-22 [我不懂 this](https://github.com/ShiRouMi/blog/issues/1)  
 - 2018-11-27 [Promise 实现](./Promise/FePromise.js)
 - 2018-11-21 类
 - 2018-11-20 [Promise 理解](./Promise/Promise.md)
@@ -19,5 +19,6 @@
 - 2018-07-11 Vue 中 nextTick 实现
 - 2018-05-31 sso单点登录
 
-H5 APi 比 `Json.parse(Json.stringify)` 支持  
+### 补充说明
+深拷贝中，使用 `H5 APi` 比 `Json.parse(Json.stringify)` 支持  
 `Date, RegExp, Map, Set, Blob, FileList, ImageData, sparse and typed Array`.
