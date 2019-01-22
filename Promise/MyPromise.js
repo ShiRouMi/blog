@@ -80,22 +80,22 @@ MyPromise.prototype.then = function(cb) {
 // })
 
 // 异步链式调用
-var p = new MyPromise(function(resolve) {
-  console.log(1)
-  setTimeout(function(){
-    resolve(2)
-  }, 1000)
-}) 
-p.then(function (val) {
-  console.log(val);
-  return new MyPromise(function (resolve) {
-    setTimeout(function () {
-      resolve(val + 1);
-    }, 1000);
-  });
-}).then(function (val) {
-  console.log(val);
-});
+// var p = new MyPromise(function(resolve) {
+//   console.log(1)
+//   setTimeout(function(){
+//     resolve(2)
+//   }, 1000)
+// }) 
+// p.then(function (val) {
+//   console.log(val);
+//   return new MyPromise(function (resolve) {
+//     setTimeout(function () {
+//       resolve(val + 1);
+//     }, 1000);
+//   });
+// }).then(function (val) {
+//   console.log(val);
+// });
 
 // 同步链式调用
 // p.then(function (val) {
@@ -104,3 +104,12 @@ p.then(function (val) {
 // }).then(function (val) {
 //   console.log(val);
 // });
+
+new MyPromise(function (resolve) {
+  resolve(1);
+}).then(function (val) {
+  console.log(val);
+});
+
+// constructor -> fn --同步--> resolve(reject) -> then -> then 回调
+// constructor -> fn--异步-- > then -> resolve(reject) -> then 回调

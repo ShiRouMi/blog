@@ -10,3 +10,12 @@ function shenkaobei(obj) {
   }
   return newObj;
 }
+var myObj = {
+  a: 1,
+  b: {
+    c: 2
+  }
+}
+
+let newObj = shenkaobei(myObj)
+console.log(newObj)
