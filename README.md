@@ -1,5 +1,6 @@
 ## blog
 
+- 2019-02-12 [符合 Promises/A+ 规范的 Promise 实现](./Promise/FPromise.js)
 - 2019-02-11 图片加载适应父级宽高
 - 2019-01-22 [我不懂 this](https://github.com/ShiRouMi/blog/issues/1)  
 - 2018-11-27 [Promise 实现](./Promise/FePromise.js)
