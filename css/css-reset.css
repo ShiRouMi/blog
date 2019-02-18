@@ -1,0 +1,36 @@
+/*重置间距*/
+ul, ol, fieldset{ margin: 0; padding: 0; }
+th, td, legend{ padding:0; }
+body, h1, h2, h3, h4, h5, h6, p, dl, dd, form, textarea { margin:0; }
+
+/*隐藏横向滚动，垂直滚动根据内容自适应（去除IE默认垂直滚动条）*/   
+html { overflow-x: hidden; overflow-y: auto; }
+
+/* 重置列表元素 */
+ol, ul { list-style: none; }
+
+/*去掉下滑线 真正有下划线样式的其实只有 :link和:visited*/  
+a { text-decoration: none; }
+
+/*为链接和按钮加上鼠标手型*/
+a, button{ cursor:pointer; }
+
+/* 去掉边框 IE8-要在ifarme标签上添加属性 frameborder="0" 才能去掉边框 */
+fieldset, img ,iframe { border: 0; } 
+
+/*去除字体默认样式 不常用：dfn,var, cite, address, optgroup{ font-style:normal; }*/
+i,em{ font-style:normal; }
+strong, th{ font-weight:normal; }
+
+/*不常用： code,pre,samp,kbd{ font-size:100%; }*/
+small, button, input, select, textarea{ font-size:100%; }
+
+/*继承父级元素的字体大小，粗体还原*/
+h1, h2, h3, h4, h5, h6{ font-size:100%; font-weight:normal; } 
+
+/* 让表格边框可以为1 */
+table { border-collapse: collapse; border-spacing: 0; } 
+caption, th { text-align: left; } 
+
+/*这个不常用*/
+/*hr{ margin:0; border:1px solid; border-width:1px 0 0 ; height:0; clear:both;  }*/

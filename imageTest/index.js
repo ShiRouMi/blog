@@ -6,12 +6,8 @@ function loadImage(img) {
       // 不建议使用
       resolve();
     } else {
-      img.onload = function(event) {
-        resolve(event);
-      };
-      img.onerror = function(err) {
-        reject(error);
-      };
+      img.onload = resolve
+      img.onerror = reject
     }
   });
 }
