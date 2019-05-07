@@ -51,9 +51,12 @@
      if(immediate) {
        // 如果已经执行过， 不再执行
        var callNow = !timeout;
+
+       // 这行代码什么意思呢？？？？！！！
        timeout = setTimeout(function(){
          timeout = null
        }, wait)
+
        if(callNow) func.apply(context, agrs)
      } else {
        timeout = setTimeout(function() {
