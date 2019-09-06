@@ -1,0 +1,106 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>防抖节流</title>
+    <style>
+      #box{
+          width: 100%; height: 200px; line-height: 200px; text-align: center; color: #fff; background-color: #444; font-size: 30px;
+      }
+    </style>
+    </style>
+  </head>
+  <body>
+    <div id="box">
+
+    </div>
+    <script type="text/javascript">
+      var count = 1
+      var Box = document.getElementById('box')
+      
+      function _debounce(fn, n, immediate) {
+        var timer, result
+        return function () {
+          var context = this // 是在这里调用的 this 值  
+          var args = arguments
+          
+          if (timer) clearTimeout(timer) // 使得一段时间内只执行一个定时器
+
+          if (immediate) {
+            // 还要考虑 如果已经执行过，就不再执行
+            var callNow = !timer
+
+            timer = setTimeout(function () {
+              timer = null;
+            }, n)
+            
+            if(callNow) result = fn.apply(context, args)
+          } else {
+            timer = setTimeout(function () {
+              fn.apply(context, args)
+            }, n) 
+          }
+          return result
+        }
+      }
+
+      // 栗子2
+      function returnFun(fn, n) {
+        return function() {
+          setTimeout(fn, n)
+        }
+      }
+
+      function trobble(fn, n) {
+          // 当前的时间戳 - 之前的时间戳
+          var previous = 0,
+            context,
+            args
+          return function () {
+            context = this
+            args = arguments
+            var now = +new Date()
+            if (now - previous > n) {
+              fn.apply(context, args)
+              previous = now
+            }
+          }
+        }
+
+      function trobble2(fn, n) {
+          var context, agrs, timer
+          return function () {
+            context = this
+            args = arguments
+            if (!timer) {
+              timer = setTimeout(function () {
+                timer = null // !!!
+                fn.apply(context, args)
+              }, n)
+            }
+          }
+        }
+      
+      // -----------------------------
+
+      
+      function _debounce2(fn, n) {
+        var timer
+        return function () {
+          clearTimeout(timer)
+          timer = setTimeout(fn, n)
+        }
+      }
+
+      function getAction(e) {
+        // console.log(this) 
+        console.log(e)
+        Box.innerHTML = count++
+      }
+      Box.onmousemove = _debounce2(getAction, 1000)
+      // Box.onmousemove = getAction // this 为 <div id="box">XX</div> // e 为 MouseEvent
+      // Box.onmousemove = trobble2(getAction, 3000) // 栗子3  // 不修改的话 this 为 window
+      // Box.onmousemove = returnFun(getAction, 1000) // 栗子2
+      // Box.onmousemove = setTimeout(getAction, 1000) // 栗子1
+    </script>
+  </body>
+</html>

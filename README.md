@@ -1,4 +1,7 @@
-## 笔记
+# 日日是好日
+好好学习
+
+另一个资料仓库[吾日需几省吾身](https://fefeng.cn/)
 
 ### Vue 
 - [利用 History API 无刷新更改地址栏](https://github.com/ShiRouMi/blog/issues/34)
@@ -11,9 +14,10 @@
 
 
 ### JavaScript
+- [包装对象和包装函数](https://github.com/ShiRouMi/blog/issues/40)
 - [JavaScript 原生事件](https://github.com/ShiRouMi/blog/issues/33)
-- [继承](https://github.com/ShiRouMi/blog/issues/31) 2019-3-13
-- [防抖 & 节流 & 定时器](https://github.com/ShiRouMi/blog/issues/30) 2019-3-12
+- [继承](https://github.com/ShiRouMi/blog/issues/31)
+- [防抖 & 节流 & 定时器](https://github.com/ShiRouMi/blog/issues/30)
 - [this](https://github.com/ShiRouMi/blog/issues/1)
 - [数组](https://github.com/ShiRouMi/blog/issues/2)
 - [new instanceof](https://github.com/ShiRouMi/blog/issues/3)
@@ -28,6 +32,7 @@
 - [执行上下文 & 作用域 & 作用域链 & 变量对象](https://github.com/ShiRouMi/blog/issues/26)
 - [迭代 枚举](https://github.com/ShiRouMi/blog/issues/29)
 - [script: async & await](https://github.com/ShiRouMi/blog/issues/18)
+- [Cookie localStorage sessionStorage](https://github.com/ShiRouMi/blog/issues/37)
 
 ### ES6
 - [谈谈 Promise.race()](https://github.com/ShiRouMi/blog/issues/36)
@@ -45,7 +50,7 @@
 - [Web Worker vs WebSocket](https://github.com/ShiRouMi/blog/issues/32)
 
 ### CSS
-
+- [CSS 命名规范](https://github.com/ShiRouMi/blog/issues/38)
 - [CSS 知识点整理](https://github.com/ShiRouMi/blog/issues/24)
 
 ### others

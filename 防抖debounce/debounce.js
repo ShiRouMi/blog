@@ -28,7 +28,6 @@
  // 第三版 解决 func 中 「event对象」问题
  function debounce(func, wait) {
    var timeout;
-
    return function() {
      var context = this;
      var args = arguments;
