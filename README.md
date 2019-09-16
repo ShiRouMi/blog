@@ -35,6 +35,8 @@
 - [Cookie localStorage sessionStorage](https://github.com/ShiRouMi/blog/issues/37)
 
 ### ES6
+- [装饰器](https://github.com/ShiRouMi/blog/issues/42)
+- [Proxy & Reflect](https://github.com/ShiRouMi/blog/issues/41)
 - [谈谈 Promise.race()](https://github.com/ShiRouMi/blog/issues/36)
 - [扩展运算符 & 解构赋值](https://github.com/ShiRouMi/blog/issues/7)
 - [解决原始无模块化的痛点](https://github.com/ShiRouMi/blog/issues/8)
