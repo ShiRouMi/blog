@@ -3,6 +3,9 @@
 
 另一个资料仓库[吾日需几省吾身](https://fefeng.cn/)
 
+### TypeScript
+- [认识 TypeScript](https://github.com/ShiRouMi/blog/issues/43)
+
 ### Vue 
 - [利用 History API 无刷新更改地址栏](https://github.com/ShiRouMi/blog/issues/34)
 - [前端路由的实现原理](https://github.com/ShiRouMi/blog/issues/35)
@@ -11,7 +14,6 @@
 - [Vue 生命周期钩子](https://github.com/ShiRouMi/blog/issues/15)
 - [Vue 中需要注意的 API](https://github.com/ShiRouMi/blog/issues/16)
 - [Vue 路由方式](https://github.com/ShiRouMi/blog/issues/27)
-
 
 ### JavaScript
 - [包装对象和包装函数](https://github.com/ShiRouMi/blog/issues/40)
@@ -32,7 +34,7 @@
 - [执行上下文 & 作用域 & 作用域链 & 变量对象](https://github.com/ShiRouMi/blog/issues/26)
 - [迭代 枚举](https://github.com/ShiRouMi/blog/issues/29)
 - [script: async & await](https://github.com/ShiRouMi/blog/issues/18)
-- [Cookie localStorage sessionStorage](https://github.com/ShiRouMi/blog/issues/37)
+
 
 ### ES6
 - [装饰器](https://github.com/ShiRouMi/blog/issues/42)
@@ -49,11 +51,16 @@
 ### 计算机基础
 
 - [网络](https://github.com/ShiRouMi/blog/issues/17)
-- [Web Worker vs WebSocket](https://github.com/ShiRouMi/blog/issues/32)
 
 ### CSS
 - [CSS 命名规范](https://github.com/ShiRouMi/blog/issues/38)
 - [CSS 知识点整理](https://github.com/ShiRouMi/blog/issues/24)
+
+### HTML5
+- [HTML5 --- web语义化](https://github.com/ShiRouMi/blog/issues/44)
+- [HTML5 特性大纲](https://github.com/ShiRouMi/blog/issues/45)
+- [Cookie localStorage sessionStorage](https://github.com/ShiRouMi/blog/issues/37)
+- [Web Worker vs WebSocket](https://github.com/ShiRouMi/blog/issues/32)
 
 ### others
 - [实现全屏功能](https://github.com/ShiRouMi/blog/issues/11)
