@@ -1,5 +1,7 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> -->
+
 ## 实现动画的几种方式
+
 - CSS 实现
 - setTimeout/setInterval 实现
 - requestAnimationFrame
