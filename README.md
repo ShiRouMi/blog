@@ -3,6 +3,17 @@
 
 另一个资料仓库[吾日需几省吾身](https://fefeng.cn/)
 
+## 目录
+- TypeScript
+- Vue
+- JavaScript
+- ES6
+- 计算机基础
+- CSS
+- HTML5
+- 其他
+
+
 ### TypeScript
 - [认识 TypeScript](https://github.com/ShiRouMi/blog/issues/43)
 
@@ -34,7 +45,7 @@
 - [执行上下文 & 作用域 & 作用域链 & 变量对象](https://github.com/ShiRouMi/blog/issues/26)
 - [迭代 枚举](https://github.com/ShiRouMi/blog/issues/29)
 - [script: async & await](https://github.com/ShiRouMi/blog/issues/18)
-
+- [JSON、JSON 对象、JSON 字符串](https://github.com/ShiRouMi/blog/issues/46)
 
 ### ES6
 - [装饰器](https://github.com/ShiRouMi/blog/issues/42)
@@ -49,7 +60,6 @@
 - [Set Map](https://github.com/ShiRouMi/blog/issues/28)
 
 ### 计算机基础
-
 - [网络](https://github.com/ShiRouMi/blog/issues/17)
 
 ### CSS
@@ -64,4 +74,6 @@
 
 ### others
 - [实现全屏功能](https://github.com/ShiRouMi/blog/issues/11)
-
+- [axios 传参的几种方式（传递表单数据 | 传递 JSON 对象| 传递 JSON 字符串）](https://github.com/ShiRouMi/blog/issues/47)
+- [npm 笔记](https://github.com/ShiRouMi/blog/issues/48)
+- [Babel 概念摘要](https://github.com/ShiRouMi/blog/issues/49)
