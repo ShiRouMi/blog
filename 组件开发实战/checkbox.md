@@ -102,4 +102,10 @@ export default {
 }
 </script>
 ```
-使用 span 模拟实现 checkbox，通过 isChecked class 来设置选中/未选中状态。而真实的 checkbox 复选框使用 v-model 双向绑定数据。绑定 v-model 为计算属性 model，设置 getter/setter，value prop 存在的话，getter 依赖 value prop 响应式更新，否则依赖内部属性 selfModel 响应式更新，setter 设置内部属性 selfModel。点击复选框，触发 change 事件，发布`on-change` 事件，传递当前的真实的复选框状态
+使用 span 模拟实现 checkbox，通过 isChecked class 来设置选中/未选中状态。
+而真实的 checkbox 复选框使用 v-model 双向绑定数据。
+
+绑定 v-model 为计算属性 model，设置 getter/setter，value prop 存在的话，getter 依赖 value prop 响应式更新，否则依赖内部属性 selfModel 响应式更新，setter 设置内部属性 selfModel。
+
+点击复选框，触发 change 事件，发布`on-change` 事件，传递当前的真实的复选框状态。
+实际上真实的 checkbox 复选框的状态会随着点击事件改变，无法固定为某一值。
