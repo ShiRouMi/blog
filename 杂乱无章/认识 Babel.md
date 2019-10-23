@@ -19,9 +19,11 @@ Babel 是下一代 JavaScript 编译器。并不是所有平台都支持最新�
 
 ## babel 执行三部曲
 - 解析
+
  使用 `babel-parse` 将 JS 代码解析成 AST 树
 
 - 转换
+
   配合 `babel-traverse` 进行 AST 树的遍历, 同时使用 `babel-core` 对外暴露的 `transform` 来调用相应插件来转化 AST 树
 ```js
 babal.transform(code, {
@@ -29,4 +31,5 @@ babal.transform(code, {
 })
 ```
 - 生成
+
 使用 `babel-generator` 将 AST 树转换回 JS 代码
