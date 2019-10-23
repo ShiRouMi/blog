@@ -109,3 +109,22 @@ export default {
 
 点击复选框，触发 change 事件，发布`on-change` 事件，传递当前的真实的复选框状态。
 实际上真实的 checkbox 复选框的状态会随着点击事件改变，无法固定为某一值。
+
+为什么模拟实现的 checkbox 能够控制复选框状态呢？ `isChecked` 是依赖 model 属性而缓存的，当父组件设置了 value prop，model 属性依赖 value 缓存，进而能控制 isChecked 属性
+
+### 选中钩的定制化
+去除原生钩子，两种方式
+```css
+// 方式一，
+// 然后再创建一个矩形，保留 border-left 和 border-bottom 的边，进行旋转得到钩
+opacity: 0;
+position: absolute;
+outline: 0;
+margin: 0;
+width: 0;
+height: 0;
+z-index: -1;
+// 方式二，相当于让元素脱离浏览器内置样式了。此时它相当于一个div
+// 试验功能
+-webkit-appearance: none;
+```
