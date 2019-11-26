@@ -1,7 +1,7 @@
 # 日日是好日
-好好学习
+好好学习, 经常复盘。
 
-另一个资料仓库[吾日需几省吾身](https://fefeng.cn/)
+个人生活博客-----[fefeng's blog](https://fefeng.cn/)
 
 ## 目录
 - TypeScript
@@ -17,7 +17,8 @@
 ### TypeScript
 - [认识 TypeScript](https://github.com/ShiRouMi/blog/issues/43)
 
-### Vue 
+### Vue
+- [Vue 中图片路径问题](https://github.com/ShiRouMi/blog/issues/52)
 - [利用 History API 无刷新更改地址栏](https://github.com/ShiRouMi/blog/issues/34)
 - [前端路由的实现原理](https://github.com/ShiRouMi/blog/issues/35)
 - [Vue.js 2.0 独立构建和运行时构建的区别](https://github.com/ShiRouMi/blog/issues/9)
@@ -63,6 +64,7 @@
 - [网络](https://github.com/ShiRouMi/blog/issues/17)
 
 ### CSS
+- [水平垂直居中的又一解决方案--- Absolute Centering](https://github.com/ShiRouMi/blog/issues/53)
 - [CSS 命名规范](https://github.com/ShiRouMi/blog/issues/38)
 - [CSS 知识点整理](https://github.com/ShiRouMi/blog/issues/24)
 
@@ -77,3 +79,5 @@
 - [axios 传参的几种方式（传递表单数据 | 传递 JSON 对象| 传递 JSON 字符串）](https://github.com/ShiRouMi/blog/issues/47)
 - [npm 笔记](https://github.com/ShiRouMi/blog/issues/48)
 - [Babel 概念摘要](https://github.com/ShiRouMi/blog/issues/49)
+- [图片性能优化实战经验](https://github.com/ShiRouMi/blog/issues/54)
+- [自动化构建工具](https://github.com/ShiRouMi/blog/issues/55)
