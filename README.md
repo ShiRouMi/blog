@@ -54,7 +54,6 @@
   - [new instanceof](https://github.com/ShiRouMi/blog/issues/3)
   - [对象](https://github.com/ShiRouMi/blog/issues/4)
   - [模拟实现 call apply bind 及其思考](https://github.com/ShiRouMi/blog/issues/5)
-  - [闭包 作用域](https://github.com/ShiRouMi/blog/issues/6)
   - [深浅拷贝及其实现](https://github.com/ShiRouMi/blog/issues/13)
   - [原型 & 原型链](https://github.com/ShiRouMi/blog/issues/19)
   - [类型判断与 Vue 的布尔属性](https://github.com/ShiRouMi/blog/issues/22)
@@ -72,10 +71,8 @@
   - [async & await](https://github.com/ShiRouMi/blog/issues/56)
   - [装饰器](https://github.com/ShiRouMi/blog/issues/42)
   - [Proxy & Reflect](https://github.com/ShiRouMi/blog/issues/41)
-  - [谈谈 Promise.race()](https://github.com/ShiRouMi/blog/issues/36)
   - [扩展运算符 & 解构赋值](https://github.com/ShiRouMi/blog/issues/7)
   - [解决原始无模块化的痛点](https://github.com/ShiRouMi/blog/issues/8)
-  - [Promise 案例](https://github.com/ShiRouMi/blog/issues/10)
   - [Promise 实现](https://github.com/ShiRouMi/blog/issues/12)
   - [阅读 Vue 源码学习 Class](https://github.com/ShiRouMi/blog/issues/20)
   - [阅读 Vue Router 源码学习 Class 继承](https://github.com/ShiRouMi/blog/issues/21)
@@ -131,3 +128,5 @@
 <details>
   <summary>算法</summary>
 </details>
+
+- [参见另一个仓库](https://github.com/shiroumi/leetcode)

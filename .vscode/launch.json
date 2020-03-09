@@ -11,7 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/algorithm/找到和为零的子数组.js"
+      "program": "${workspaceFolder}/201912/20200305.js"
     }
   ]
 }
