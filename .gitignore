@@ -9,3 +9,4 @@ node_modules
 .fe-ui
 .JavaScript
 .lodash
+yarn.lock
