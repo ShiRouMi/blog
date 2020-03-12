@@ -84,7 +84,8 @@ export default function (Vue, options) {
   function onDragEnter(e) {
     let el = e.target
     if(!el || !Current) return 
-    if(el === Current.el) return 
+    // 值更新的时候 item 可能会 undefined
+    if (el === Current.el || !Current.item || !Current.el) return 
 
     const DDD = dragData.set()
     const dragKey = el.getAttribute("drag_key")
@@ -92,12 +93,12 @@ export default function (Vue, options) {
 
     if(item === Current.item) return 
 
-    const indexTo = DDD.list.indexOf(item),
-          indexFrom = DDD.list.indexOf(Current.item)
+    const indexTo = DDD.list.indexOf(item)
+    const indexFrom = DDD.list.indexOf(Current.item)
 
     swapElements(DDD.list, indexTo, indexFrom)
 
-    Current.index = indexTo // 这里为什么只需要重新赋值index 就好
+    Current.index = indexTo
   }
   function onDragLeave() {}
   
@@ -110,9 +111,9 @@ export default function (Vue, options) {
   }
 
   function addDragItems(el, binding, vnode) {
-    let dragKey = vnode.key,
-        list = binding.value.list,
-        item = binding.value.item
+    const dragKey = vnode.key
+    const list = binding.value.list
+    const item = binding.value.item
     
     let DDD = dragData.set()
     DDD.list = list
@@ -131,15 +132,15 @@ export default function (Vue, options) {
   }
 
   function swapElements(list, from, to) {
-    const itemFrom = list[from],
-          itemTo = list[to]
+    const itemFrom = list[from]
+    const itemTo = list[to]
     Vue.set(list, from, itemTo)
     Vue.set(list, to, itemFrom)
   }
 
   function removeDragItems(el, binding, vnode) {
     const dragKey = vnode.key
-    const DDD = dragData.new()
+    const DDD = dragData.set()
     DDD.KEY_MAP[dragKey] = undefined
     _.off(el, "dragstart", onDragStart)
     _.off(el, "drag", onDrag)
@@ -150,8 +151,24 @@ export default function (Vue, options) {
     _.off(el, "drop", onDrop)
   }
 
+  function updateDragItems(el, binding, vnode) {
+
+    const dragKey = vnode.key
+    const DDD = dragData.set()
+    const item = binding.value.item
+    const oldItem = DDD.KEY_MAP[dragKey]
+    const list = binding.value.list
+    if (item && item !== oldItem) {
+      DDD.KEY_MAP[dragKey] = item
+    }
+    if(list && list !== DDD.list) {
+      DDD.list = list
+    }
+  }
+
   Vue.directive("dragging", {
     bind: addDragItems,
+    update: updateDragItems,
     unbind: removeDragItems
   })
 }
