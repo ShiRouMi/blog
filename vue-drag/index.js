@@ -25,12 +25,22 @@ const _ = {
     if(arguments.length < 2) {
       el.classList.add(cls)
     } else {
-      for(let i=0,len=arguments.length; i<len; i++) {
+      for(let i=1,len=arguments.length; i<len; i++) {
         el.classList.add(arguments[i])
+      }
+    }
+  },
+  removeClass(el, cls) {
+    if (arguments.length < 2) {
+      el.classList.remove(cls)
+    } else {
+      for (let i = 1, len = arguments.length; i < len; i++) {
+        el.classList.remove(arguments[i])
       }
     }
   }
 }
+
 export default function (Vue, options) {
   let Current = null
 
@@ -42,6 +52,8 @@ export default function (Vue, options) {
     const DDD = dragData.new()
     const item = DDD.KEY_MAP[dragKey]
     const index = DDD.list.indexOf(item)
+
+    _.addClass(el, 'dragging')
 
     if(e.dataTransfer) {
       e.dataTransfer.effectAllowed = 'move'
@@ -63,7 +75,9 @@ export default function (Vue, options) {
 
   function onDrag() {}
 
-  function onDragEnd() {
+  function onDragEnd(e) {
+    let el = e.target
+    _.removeClass(el, "dragging")
     Current = null
   }
 
