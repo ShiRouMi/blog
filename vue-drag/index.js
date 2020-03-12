@@ -3,7 +3,7 @@ class DragData {
     this.data = {}
   }
 
-  new() {
+  set() {
     if (!Object.keys(this.data).length) {
       this.data = {
         list: [],
@@ -49,7 +49,7 @@ export default function (Vue, options) {
   function onDragStart(e) {
     const el = e.target // TODO:
     const dragKey = el.getAttribute("drag_key")
-    const DDD = dragData.new()
+    const DDD = dragData.set()
     const item = DDD.KEY_MAP[dragKey]
     const index = DDD.list.indexOf(item)
 
@@ -86,7 +86,7 @@ export default function (Vue, options) {
     if(!el || !Current) return 
     if(el === Current.el) return 
 
-    const DDD = dragData.new()
+    const DDD = dragData.set()
     const dragKey = el.getAttribute("drag_key")
     const item = DDD.KEY_MAP[dragKey]
 
@@ -114,7 +114,7 @@ export default function (Vue, options) {
         list = binding.value.list,
         item = binding.value.item
     
-    let DDD = dragData.new()
+    let DDD = dragData.set()
     DDD.list = list
     DDD.KEY_MAP[dragKey] = item
     
@@ -137,7 +137,21 @@ export default function (Vue, options) {
     Vue.set(list, to, itemFrom)
   }
 
+  function removeDragItems(el, binding, vnode) {
+    const dragKey = vnode.key
+    const DDD = dragData.new()
+    DDD.KEY_MAP[dragKey] = undefined
+    _.off(el, "dragstart", onDragStart)
+    _.off(el, "drag", onDrag)
+    _.off(el, "dragend", onDragEnd)
+    _.off(el, "dragover", onDragOver)
+    _.off(el, "dragenter", onDragEnter)
+    _.off(el, "dragleave", onDragLeave)
+    _.off(el, "drop", onDrop)
+  }
+
   Vue.directive("dragging", {
-    bind: addDragItems
+    bind: addDragItems,
+    unbind: removeDragItems
   })
 }

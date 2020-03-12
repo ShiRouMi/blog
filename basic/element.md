@@ -16,3 +16,10 @@
 获取或设置一个元素的内容垂直滚动的像素数。
 一个元素的 `scrollTop` 值是这个元素的顶部到视口可见内容（的顶部）的距离的度量
 
+## classList
+只读属性，返回一个元素的类属性的实时 DOMTokenList 集合。
+
+```js
+el.classList.remove("foo");
+el.classList.add("foo");
+```
