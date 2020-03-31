@@ -35,7 +35,6 @@
   - [利用 History API 无刷新更改地址栏](https://github.com/ShiRouMi/blog/issues/34)
   - [前端路由的实现原理](https://github.com/ShiRouMi/blog/issues/35)
   - [Vue.js 2.0 独立构建和运行时构建的区别](https://github.com/ShiRouMi/blog/issues/9)
-  - [Vue filter](https://github.com/ShiRouMi/blog/issues/14)
   - [Vue 生命周期钩子](https://github.com/ShiRouMi/blog/issues/15)
   - [Vue 中需要注意的 API](https://github.com/ShiRouMi/blog/issues/16)
   - [Vue 路由方式](https://github.com/ShiRouMi/blog/issues/27)
