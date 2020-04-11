@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <script>
+      /**
+ * Definition for singly-linked list.
+
+ /
+/**
+ * @param {ListNode} head
+ * @param {number} k
+ * @return {ListNode}
+ */
+var getKthFromEnd = function(head, k) {
+    let p = head, q = head;
+
+    let i = 0;
+    while (p) {
+        if (i >= k) {
+            q = q.next;
+        }
+        p = p.next;
+        i++;
+    }
+    return i < k ? null : q;
+
+};
+let json = {
+  head: 1,
+  next: {
+    val: 2,
+    next: {
+      val: 3,
+      next: {
+        val: 4
+      }
+    }
+  }
+}
+getKthFromEnd(json, 4)
+    </script>
+  </body>
+</html>

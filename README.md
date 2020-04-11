@@ -126,6 +126,6 @@
 
 <details>
   <summary>算法</summary>
+  
+  - [参见另一个仓库](https://github.com/shiroumi/leetcode)
 </details>
-
-- [参见另一个仓库](https://github.com/shiroumi/leetcode)
